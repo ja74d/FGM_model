@@ -50,4 +50,8 @@ Q[2, 2] = Q44
 Q[3, 3] = Q55
 Q[4, 4] = Q66
 
-print(Q)
+#print(Q)
+
+#e (diffrence between Mid-plane and physical neutral plane)
+
+e = 
