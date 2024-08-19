@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sympy import symbols, integrate
 
 #material properies
-
 pc = 10e+07
 pm = 5e+07
 h = 1
@@ -54,4 +54,9 @@ Q[4, 4] = Q66
 
 #e (diffrence between Mid-plane and physical neutral plane)
 
-e = 
+z, n = symbols('z n')
+E = (Ec-Em)*((z/h)+0.5)**n + Em
+
+e = ( integrate(z*E, (z, -h/2, h/2)) ) / (integrate(E, (z, -h/2, h/2)))
+
+#print(e)
